@@ -20,7 +20,7 @@ set backspace=indent,eol,start    " Intuitive backspacing.
 set hidden                        " Handle multiple buffers better.
 
 set wildmenu                      " Enhanced command line completion.
-set wildmode=list:longest         " Complete files like a shell.
+set wildmode=list:longest,full    " Complete files like a shell.
 
 set ignorecase                    " Case-insensitive searching.
 set smartcase                     " But case-sensitive if expression contains a capital letter.
@@ -65,9 +65,25 @@ map <leader>tf :tabfirst<cr>
 map <leader>tl :tablast<cr>
 map <leader>tm :tabmove
 
-" Uncomment to use Jamis Buck's file opening plugin
-map <Leader>t :FuzzyFinderTextMate<Enter>
+" Specify a directory for plugins (for Neovim: ~/.local/share/nvim/plugged)
+call plug#begin('~/.config/nvim/plugged')
 
+Plug 'scrooloose/nerdtree'
+
+Plug 'Xuyuanp/nerdtree-git-plugin'
+
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+
+
+
+" Initialize plugin system
+call plug#end()
+
+" Uncomment to use Jamis Buck's file opening plugin
+" map <Leader>t :FuzzyFinderTextMate<Enter>
+set runtimepath^=~/.config/nvim/bundle/ctrlp.vim
+
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 " Controversial...swap colon and semicolon for easier commands
 "nnoremap ; :
 "nnoremap : ;
