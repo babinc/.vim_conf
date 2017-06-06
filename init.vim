@@ -40,7 +40,12 @@ set visualbell                    " No beeping.
 
 set nobackup                      " Don't make a backup before overwriting a file.
 set nowritebackup                 " And again.
-set directory=$HOME/.vim/tmp//,.  " Keep swap files in one location
+
+set undodir=~/.vim/.undo//
+
+set backupdir=~/.vim/.backup//
+
+set directory=~/.vim/.swp//
 
 " UNCOMMENT TO USE
 set softtabstop=2                    " Global tab width.
@@ -72,9 +77,27 @@ Plug 'scrooloose/nerdtree'
 
 Plug 'Xuyuanp/nerdtree-git-plugin'
 
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'mileszs/ack.vim'
 
+Plug 'https://github.com/pangloss/vim-javascript.git'
 
+Plug 'tpope/vim-fugitive'
+
+Plug 'https://github.com/tpope/vim-git.git'
+
+Plug 'git://github.com/tpope/vim-surround.git'
+
+Plug 'mattn/emmet-vim'
+
+Plug 'git://github.com/tpope/vim-commentary.git'
+
+Plug 'mxw/vim-jsx'
+
+Plug 'https://github.com/leshill/vim-json.git'
+
+Plug 'Valloric/YouCompleteMe'
+
+Plug 'https://github.com/danro/rename.vim.git'
 
 " Initialize plugin system
 call plug#end()
@@ -94,3 +117,17 @@ let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 " Automatic fold settings for specific files. Uncomment to use.
 " autocmd FileType ruby setlocal foldmethod=syntax
 " autocmd FileType css  setlocal foldmethod=indent shiftwidth=2 tabstop=2
+
+"folding
+set foldmethod=syntax
+set foldlevel=20
+
+"javaScript
+let g:javascript_plugin_flow = 1
+let g:jsx_ext_required = 0
+
+"enable keyboard shortcuts
+let g:tern_map_keys=1
+"show argument hints
+let g:tern_show_argument_hints='on_hold'
+set completeopt-=preview
