@@ -97,6 +97,8 @@ Plug 'https://github.com/leshill/vim-json.git'
 
 Plug 'Valloric/YouCompleteMe'
 
+Plug 'https://github.com/ctrlpvim/ctrlp.vim.git'
+
 Plug 'https://github.com/danro/rename.vim.git'
 
 " Initialize plugin system
