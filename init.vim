@@ -47,6 +47,10 @@ set backupdir=~/.vim/.backup//
 
 set directory=~/.vim/.swp//
 
+let g:airline_theme='luna'
+
+set backupcopy=yes
+
 " UNCOMMENT TO USE
 set softtabstop=2                    " Global tab width.
 set shiftwidth=2                 " And again, related.
@@ -75,7 +79,7 @@ call plug#begin('~/.config/nvim/plugged')
 
 Plug 'scrooloose/nerdtree'
 
-Plug 'Xuyuanp/nerdtree-git-plugin'
+"Plug 'Xuyuanp/nerdtree-git-plugin'
 
 Plug 'mileszs/ack.vim'
 
@@ -100,6 +104,11 @@ Plug 'Valloric/YouCompleteMe'
 Plug 'https://github.com/ctrlpvim/ctrlp.vim.git'
 
 Plug 'https://github.com/danro/rename.vim.git'
+
+Plug 'https://github.com/elzr/vim-json.git'
+
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 
 " Initialize plugin system
 call plug#end()
