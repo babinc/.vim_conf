@@ -60,8 +60,12 @@ set laststatus=2                  " Show the status line all the time
 " Useful status information at bottom of screen
 set statusline=[%n]\ %<%.99f\ %h%w%m%r%y\ %{exists('*CapsLockStatusline')?CapsLockStatusline():''}%=%-16(\ %l,%c-%v\ %)%P
 
+let g:cpp_class_scope_highlight = 1
+let g:cpp_member_variable_highlight = 1
+let g:cpp_class_decl_highlight = 1
+let g:cpp_concepts_highlight = 1
 " Or use vividchalk
-colorscheme monokai-phoenix 
+colorscheme monokai-phoenix
 
 " Tab mappings.
 map <leader>tt :tabnew<cr>
@@ -76,6 +80,8 @@ map <leader>tm :tabmove
 
 " Specify a directory for plugins (for Neovim: ~/.local/share/nvim/plugged)
 call plug#begin('~/.config/nvim/plugged')
+
+Plug 'https://github.com/Quramy/tsuquyomi.git'
 
 Plug 'scrooloose/nerdtree'
 
@@ -110,6 +116,7 @@ Plug 'https://github.com/elzr/vim-json.git'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
+Plug 'octol/vim-cpp-enhanced-highlight'
 " Initialize plugin system
 call plug#end()
 
