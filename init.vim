@@ -117,6 +117,9 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
 Plug 'octol/vim-cpp-enhanced-highlight'
+
+Plug 'w0rp/ale'
+
 " Initialize plugin system
 call plug#end()
 
